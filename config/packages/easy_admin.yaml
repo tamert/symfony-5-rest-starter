@@ -1,0 +1,14 @@
+easy_admin:
+    site_name: '<b>Easy Admin - Test</b>'
+    design:
+        menu: ['Post', 'Categories', 'Author']
+    entities:
+        Post:
+            class: App\Entity\Post
+            label: "Makale"
+        Categories:
+            class: App\Entity\Category
+            label: "Kategoriler"
+        Author:
+            class: App\Entity\Author
+            label: "Yazar"
