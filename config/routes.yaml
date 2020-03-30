@@ -5,3 +5,14 @@ api_login_check:
     path: /api/login_check
     methods:
         - POST
+
+login_check:
+    path:  /administration/login_check
+
+logout:
+    path:  /administration/logout
+
+app.swagger_ui:
+    path: /api/doc
+    methods: GET
+    defaults: { _controller: nelmio_api_doc.controller.swagger_ui }

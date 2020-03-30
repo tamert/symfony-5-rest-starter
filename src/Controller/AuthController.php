@@ -1,18 +1,18 @@
 <?php
 
-
 namespace App\Controller;
 
 use App\Entity\User;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
-use Swagger\Annotations as SWG;
 
 class AuthController extends AbstractController
 {
     /**
      * @Route("/login", name="login")
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\Response
      */
     public function login(Request $request)
     {
@@ -28,9 +28,10 @@ class AuthController extends AbstractController
                 'messageData' => []
             ];
         }
-        $action = $this->get('router')->generate('login');
+        $action = $this->get('router')->generate('login_check');
         $csrf_token_intention = 'authenticate';
 
         return $this->render('@EasyAdmin/page/login.html.twig', compact('error', 'action', 'csrf_token_intention'));
     }
 }
+

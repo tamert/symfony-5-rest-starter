@@ -10,11 +10,12 @@ security:
       pattern: ^/(_(profiler|wdt)|css|images|js)/
       security: false
 
+
     admin:
       pattern:  ^/administration
       anonymous: ~
       context: primary_auth
-      #provider: user_provider
+      provider: app_user_provider
       form_login:
         check_path: login_check
         login_path: login
@@ -30,7 +31,7 @@ security:
           - App\Security\Authenticator
 
     doc:
-      pattern:  ^/api/docs
+      pattern:  ^/api/doc
       security: false
 
     login:
@@ -59,10 +60,10 @@ security:
   # Note: Only the *first* access control that matches will be used
   access_control:
     - { path: ^/api/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
-    - { path: ^/api/docs, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+    - { path: ^/api/doc, roles: IS_AUTHENTICATED_ANONYMOUSLY }
     - { path: ^/api,       roles: IS_AUTHENTICATED_ANONYMOUSLY }
     - { path: ^/administration, roles: ROLE_ADMIN }
-    -
+
   providers:
     # used to reload user from session & other features (e.g. switch_user)
     app_user_provider:

@@ -55,7 +55,6 @@ class AuthAdminHandler implements AuthenticationFailureHandlerInterface,
      */
     public function onAuthenticationSuccess(Request $request, TokenInterface $token)
     {
-        dd($request);
         $user = $token->getUser();
         $request->getSession()->set('userId', $user->getId());
 
