@@ -10,6 +10,7 @@
         "easycorp/easyadmin-bundle": "^2.3",
         "friendsofsymfony/rest-bundle": "3.0.x-dev",
         "guzzlehttp/guzzle": "^6.5",
+        "league/fractal": "^0.19.2",
         "lexik/jwt-authentication-bundle": "^2.6",
         "nelmio/api-doc-bundle": "^3.6",
         "symfony/apache-pack": "^1.0",
