@@ -9,10 +9,12 @@
         "doctrine/annotations": "^1.8",
         "easycorp/easyadmin-bundle": "^2.3",
         "friendsofsymfony/rest-bundle": "3.0.x-dev",
+        "gesdinet/jwt-refresh-token-bundle": "^0.9.1",
         "guzzlehttp/guzzle": "^6.5",
         "league/fractal": "^0.19.2",
         "lexik/jwt-authentication-bundle": "^2.6",
         "nelmio/api-doc-bundle": "^3.6",
+        "symfony-bundles/json-request-bundle": "^3.0",
         "symfony/apache-pack": "^1.0",
         "symfony/console": "5.0.*",
         "symfony/dotenv": "5.0.*",
@@ -21,6 +23,7 @@
         "symfony/framework-bundle": "5.0.*",
         "symfony/orm-pack": "^1.0",
         "symfony/security-bundle": "5.0.*",
+        "symfony/swiftmailer-bundle": "^3.4",
         "symfony/yaml": "5.0.*"
     },
     "require-dev": {
